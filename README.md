@@ -17,7 +17,7 @@ Step function locations:
 
 ## How to run tests
 1. Clone the repo
-2. Run scripts/setup.sh to install dependencies (comment out the dependencies you already have)
+2. Run scripts/setup.sh to install dependencies (comment out the dependencies you already have). Provide one of --java, --go, --js, --py, if set the TRAVIS_BUILD_DIR environment variable should point to the source directory of that SDK.
 3. Run scripts/test.sh
 
 ## About the scripts
@@ -38,3 +38,7 @@ The scripts have language flags to choose which SDK to test. The only script you
 - If you use libraries that are not already used by the SDKs themselves, make sure to add them to setup.sh 
 - godog does not reset variables between tests, so make sure that you are referencing something that was set in a previous step of the current scenario
 - If you are testing locally, check every so often that you have the latest versions of the SDKs
+
+# Dependencies
+
+- pyenv installed to /opt/pyenv
